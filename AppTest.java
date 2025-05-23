@@ -42,7 +42,7 @@ public class AppTest {
 
     // 4. Add Inventory Item Execution (Functional)
     @Test @Order(4)
-    void Test_Create_Query_Exist() {
+    void test_Create_Query_Exist() {
         Inventory item = new Inventory(0, "TestItem", "TestCategory", 5, 49.99);
         String result = service.addItem(item);
         Assertions.assertTrue(result.contains("success"));
@@ -54,7 +54,7 @@ public class AppTest {
 
     // 5. Delete Inventory Item Execution (Functional)
     @Test @Order(5)
-    void Test_Delete_Query_Exist() {
+    void test_Delete_Query_Exist() {
         Inventory item = new Inventory(0, "DemoItem", "DemoCategory", 10, 99.99);
         String addResult = service.addItem(item);
         Assertions.assertTrue(addResult.contains("added"));
